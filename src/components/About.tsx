@@ -5,8 +5,8 @@ export default function About() {
     return (
         <section
             id="about"
-            className="relative shadow-lg rounded-2xl overflow-hidden border border-gray-100 animate-fade-in min-h-[400px] 
-            flex flex-col justify-center p-6 mb-6 md:pt-120"
+            className="relative shadow-md rounded-2xl overflow-hidden border border-gray-100 animate-fade-in
+            flex flex-col justify-end p-6 mb-12 min-h-[calc(100vh-70px)]"
         >
 
             <div className="absolute inset-0">
