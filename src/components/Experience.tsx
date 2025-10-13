@@ -5,7 +5,7 @@ export default function Experience() {
     const experiences = [
         {
             company: "Codec",
-            time: "6/2025 - Present",
+            time: "4/2025 - Present",
             position: "Front End",
             details: [
                 "Tham gia phát triển dự án web thương mại điện tử.",

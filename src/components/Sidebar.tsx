@@ -3,7 +3,6 @@ import { useState } from "react";
 import {
     Menu,
     X,
-    Briefcase,
     Mail,
     User,
     Code,
@@ -11,6 +10,7 @@ import {
     GithubIcon,
     Linkedin,
     Facebook,
+    Computer,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -19,7 +19,7 @@ export default function Sidebar() {
     const [open, setOpen] = useState(false);
     const menu = [
         { name: "About", href: "#about", icon: User },
-        { name: "Experience", href: "#experience", icon: Briefcase },
+        { name: "Experience", href: "#experience", icon: Computer },
         { name: "Skills", href: "#skills", icon: Code },
         { name: "Projects", href: "#projects", icon: Rocket },
         { name: "Contact", href: "#contact", icon: Mail },
@@ -96,18 +96,6 @@ export default function Sidebar() {
                             );
                         })}
                     </nav>
-                </div>
-
-                <div className="flex justify-center space-x-4 mt-8 pb-4">
-                    <div className="p-3 rounded-full bg-white shadow hover:bg-orange-50 border border-orange-100 hover:scale-110 transition-transform duration-200 cursor-pointer">
-                        <GithubIcon size={22} className="text-gray-700 hover:text-orange-600" />
-                    </div>
-                    <div className="p-3 rounded-full bg-white shadow hover:bg-orange-50 border border-orange-100 hover:scale-110 transition-transform duration-200 cursor-pointer">
-                        <Linkedin size={22} className="text-gray-700 hover:text-orange-600" />
-                    </div>
-                    <div className="p-3 rounded-full bg-white shadow hover:bg-orange-50 border border-orange-100 hover:scale-110 transition-transform duration-200 cursor-pointer">
-                        <Facebook size={22} className="text-gray-700 hover:text-orange-600" />
-                    </div>
                 </div>
             </aside>
         </>
