@@ -4,39 +4,21 @@ import SectionTitle from "./SectionTitle";
 export default function Projects() {
     const projects = [
         {
-            name: "E-commerce Platform",
-            desc: "Nền tảng thương mại điện tử với thanh toán và dashboard admin.",
-            tech: ["React", "Node.js", "MongoDB"],
+            name: "Portfolio",
+            desc: "Website giới thiệu cá nhân với thông tin, dự án, kỹ năng và liên hệ.",
+            tech: ["Next.js"],
             color: "from-indigo-400 to-green-300",
-        },
-        {
-            name: "Analytics Dashboard",
-            desc: "Dashboard phân tích dữ liệu với biểu đồ real-time.",
-            tech: ["Vue.js", "D3.js", "Firebase"],
-            color: "from-green-300 to-cyan-300",
-        },
-        {
-            name: "Mobile App UI",
-            desc: "Giao diện mobile app tập trung vào UX/UI.",
-            tech: ["React Native", "Figma"],
-            color: "from-pink-400 to-red-300",
-        },
-        {
-            name: "Creative Portfolio",
-            desc: "Portfolio animation với GSAP.",
-            tech: ["JavaScript", "GSAP"],
-            color: "from-blue-400 to-indigo-400",
-        },
+        }
     ];
 
     return (
         <section id="projects" className="bg-white shadow-md rounded-2xl p-6 md:p-8">
-            <SectionTitle title="Recent Projects" />
+            <SectionTitle title="Projects" />
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {projects.map((proj, i) => (
                     <div
                         key={i}
-                        className="rounded-xl overflow-hidden shadow-sm border hover:shadow-md transition bg-white"
+                        className="rounded-xl overflow-hidden shadow-sm border hover:shadow-md transition bg-white border-gray-100"
                     >
                         <div className={`h-32 bg-gradient-to-r ${proj.color}`}></div>
                         <div className="p-4">
@@ -46,7 +28,7 @@ export default function Projects() {
                                 {proj.tech.map((t) => (
                                     <span
                                         key={t}
-                                        className="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-700"
+                                        className="text-xs px-5 py-3 bg-gray-200 rounded-[6px] text-black font-bold"
                                     >
                                         {t}
                                     </span>
@@ -54,7 +36,7 @@ export default function Projects() {
                             </div>
                             <Link
                                 href="#"
-                                className="text-orange-600 font-semibold text-sm hover:underline"
+                                className="text-orange-600 font-semibold text-sm"
                             >
                                 View Project →
                             </Link>

@@ -22,8 +22,8 @@ export default function Skills() {
             icon: <Code2 className="text-orange-500" size={22} />,
             gradient: "from-pink-100 via-orange-50 to-yellow-100",
             skills : [
-                { name: "React.js", icon: "/icons/react.svg" },
-                { name: "Next.js", icon: "/icons/next.svg" },
+                { name: "Reactjs", icon: "/icons/react.svg" },
+                { name: "Nextjs", icon: "/icons/next.svg" },
                 { name: "HTML", icon: "/icons/html.svg" },
                 { name: "CSS", icon: "/icons/css.svg" },
                 { name: "TypeScript", icon: "/icons/typescript.svg" },
