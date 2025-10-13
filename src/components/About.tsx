@@ -1,25 +1,61 @@
-import SectionTitle from "./SectionTitle";
+import { LayoutGrid, Download } from "lucide-react";
+import Image from "next/image";
 
 export default function About() {
     return (
-        <section id="about" className="bg-white shadow-md rounded-2xl p-6 md:p-8">
-            <SectionTitle title="About Me" />
-            <p className="mb-4 text-sm md:text-base">
-                Xin chào! Tôi là Alex, một Frontend Developer với đam mê tạo ra những giao diện web đẹp
-                mắt và thân thiện với người dùng. Tôi có hơn 3 năm kinh nghiệm với React, Vue.js, Node.js.
-            </p>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center font-medium">
-                {[
-                    { label: "Projects", value: "50+" },
-                    { label: "Clients", value: "20+" },
-                    { label: "Years", value: "3+" },
-                    { label: "Passion", value: "100%" },
-                ].map((item) => (
-                    <div key={item.label}>
-                        <p className="text-2xl md:text-3xl text-orange-600 font-bold">{item.value}</p>
-                        <p>{item.label}</p>
-                    </div>
-                ))}
+        <section
+            id="about"
+            className="relative shadow-lg rounded-2xl overflow-hidden border border-gray-100 animate-fade-in min-h-[400px] 
+            flex flex-col justify-center p-6 mb-6 md:pt-120"
+        >
+
+            <div className="absolute inset-0">
+                <Image
+                    src="/images/banner.jpeg"
+                    alt="Background"
+                    fill
+                    priority
+                    className="object-cover scale-110 blur-[2px] brightness-[0.6] animate-[floatBg_20s_ease-in-out_infinite]"
+                />
+            </div>
+
+            <div className="absolute inset-0 
+                bg-[radial-gradient(circle_at_40%_50%,rgba(255,255,255,0.25)_0%,rgba(255,255,255,0.1)_40%,rgba(0,0,0,0.35)_100%)] 
+                mix-blend-overlay opacity-70" 
+            />
+
+            <div className="relative z-10 text-white drop-shadow-md">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                    Tôi là <span className="text-orange-400">Nguyễn Xuân Thành</span> <br className="hidden sm:block" />
+                    Frontend Developer và Creative Coder.
+                </h1>
+
+                <p className="mb-10 text-lg md:text-xl leading-relaxed max-w-2xl text-gray-100">
+                    Với hơn 3 năm kinh nghiệm, tôi biến ý tưởng thành những trải nghiệm web độc đáo 
+                    và tối ưu, luôn tìm kiếm sự sáng tạo trong từng dòng code.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                    <a
+                        href="#projects"
+                        className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-400 to-purple-600 
+                        text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 
+                        transition-all duration-300 ease-in-out group"
+                    >
+                        <LayoutGrid size={20} className="mr-3 group-hover:animate-spin-slow" />
+                        My Works
+                    </a>
+
+                    <a
+                        href="/path/to/your-cv.pdf"
+                        download
+                        className="inline-flex items-center px-6 py-4 text-white font-semibold 
+                        rounded-full border-2 border-white/60 hover:bg-white/10 hover:border-white transition-colors 
+                        duration-300 ease-in-out"
+                    >
+                        Download CV <Download size={20} className="ml-3" />
+                    </a>
+                </div>
             </div>
         </section>
     );
