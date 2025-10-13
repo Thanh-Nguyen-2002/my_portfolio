@@ -31,8 +31,8 @@ export default function About() {
                 </h1>
 
                 <p className="mb-10 text-lg md:text-xl leading-relaxed max-w-2xl text-gray-100">
-                    Với hơn 3 năm kinh nghiệm, tôi biến ý tưởng thành những trải nghiệm web độc đáo 
-                    và tối ưu, luôn tìm kiếm sự sáng tạo trong từng dòng code.
+                    Tôi là một lập trình viên giao diện web, yêu thích sáng tạo và xây dựng những 
+                    sản phẩm mang lại trải nghiệm tốt cho người dùng.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
@@ -46,15 +46,15 @@ export default function About() {
                         My Works
                     </a>
 
-                    <a
-                        href="/path/to/your-cv.pdf"
-                        download
+                    <div
+                        // href="/path/to/your-cv.pdf"
+                        // download
                         className="inline-flex items-center px-6 py-4 text-white font-semibold 
                         rounded-full border-2 border-white/60 hover:bg-white/10 hover:border-white transition-colors 
                         duration-300 ease-in-out"
                     >
                         Download CV <Download size={20} className="ml-3" />
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
