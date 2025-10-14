@@ -46,15 +46,18 @@ export default function About() {
                         My Works
                     </a>
 
-                    <div
-                        // href="/path/to/your-cv.pdf"
-                        // download
+                    <a
+                        href="/CV_Frontend_NguyenXuanThanh.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center px-6 py-4 text-white font-semibold 
-                        rounded-full border-2 border-white/60 hover:bg-white/10 hover:border-white transition-colors 
-                        duration-300 ease-in-out"
+                                    rounded-full border-2 border-white/60 hover:bg-white/10 hover:border-white 
+                                    transition-colors duration-300 ease-in-out"
                     >
-                        Download CV <Download size={20} className="ml-3" />
-                    </div>
+                        Download CV
+                        <Download size={20} className="ml-3" />
+                    </a>
+
                 </div>
             </div>
         </section>
