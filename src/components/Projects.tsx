@@ -9,12 +9,23 @@ export default function Projects() {
             desc: "Website giới thiệu cá nhân với thông tin, dự án, kỹ năng và liên hệ.",
             tech: ["NextJs", "Tailwind CSS"],
             image: "/images/protfolio.png",
+            linkWebSite: "https://my-protfolio-nine-mu.vercel.app/",
+            slug : "Portfolio"
         },
         {
             name: "E-commerce Platform",
             desc: "Nền tảng thương mại điện tử với hệ thống quản lý sản phẩm, giỏ hàng, thanh toán và trang quản trị dành cho admin.",
             tech: ["ReactJS", "Tailwind CSS", "TypeScipt"],
             image: "/images/ecommerce.png",
+            slug : "E-commerce Platform"
+        },
+        {
+            name: "Review Food",
+            desc: "Nền tảng chia sẻ và khám phá ẩm thực Việt Nam với các bài viết, đánh giá và bản đồ món ngon ba miền.",
+            tech: ["NextJS", "Tailwind CSS"],
+            image: "/images/review_food.png",
+            linkWebSite: "https://review-food.vercel.app/",
+            slug : "Review Food"
         }
 
     ];
@@ -52,12 +63,21 @@ export default function Projects() {
                             </div>
                             <div className="flex-1 flex-col">   
                                 <Link
-                                    href="#"
+                                    href={`project/${proj.name}`}
                                     className="text-orange-600 font-semibold text-sm hover:underline"
                                 >
                                     View Project →
                                 </Link>
                             </div>
+                            <a
+                                href={proj?.linkWebSite}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-500 hover:underline"
+                            >
+                                {proj?.linkWebSite}
+                            </a>
+
                            
                         </div>
                     </div>
