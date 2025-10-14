@@ -12,6 +12,8 @@ interface Props {
 
 export default async function ProjectDetail({ params } : Props) {
     const { slug } = await params
+    console.log(slug);
+    
     
     const project = data_project_detail.find(i => i.slug === slug);
     

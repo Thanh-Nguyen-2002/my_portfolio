@@ -7,9 +7,6 @@ import {
     User,
     Code,
     Rocket,
-    GithubIcon,
-    Linkedin,
-    Facebook,
     Computer,
 } from "lucide-react";
 import Link from "next/link";

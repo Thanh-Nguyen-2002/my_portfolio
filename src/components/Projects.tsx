@@ -11,14 +11,14 @@ export default function Projects() {
             tech: ["NextJs", "Tailwind CSS"],
             image: "/images/protfolio.png",
             linkWebSite: "https://my-protfolio-nine-mu.vercel.app/",
-            slug : "Portfolio"
+            slug : "portfolio"
         },
         {
             name: "E-commerce Platform",
             desc: "Nền tảng thương mại điện tử với hệ thống quản lý sản phẩm, giỏ hàng, thanh toán và trang quản trị dành cho admin.",
             tech: ["ReactJS", "Tailwind CSS", "TypeScipt"],
             image: "/images/ecommerce.png",
-            slug : "E-commerce Platform"
+            slug : "e-commerce_platform"
         },
         {
             name: "Review Food",
@@ -26,7 +26,7 @@ export default function Projects() {
             tech: ["NextJS", "Tailwind CSS"],
             image: "/images/review_food.png",
             linkWebSite: "https://review-food.vercel.app/",
-            slug : "Review Food"
+            slug : "review_food"
         }
 
     ];
@@ -75,7 +75,7 @@ export default function Projects() {
                                     </a>
                                 }  
                                 <Link
-                                    href={`project/${proj.name}`}
+                                    href={`project/${proj.slug}`}
                                     className="text-orange-600 font-semibold text-sm hover:underline content-center"
                                 >
                                     View Project →

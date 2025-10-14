@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Github, Linkedin, Facebook, Gitlab, Hand, MousePointerClick } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Facebook, Gitlab, MousePointerClick } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 
 export default function Contact() {
