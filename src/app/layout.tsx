@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ClientLayoutWrapper from "@/components/ClientLayoutWrapper";
 
-export const metadata:Metadata = {
+export const metadata: Metadata = {
   title: "Nguyễn Xuân Thành | Frontend Developer & Creative Coder",
   description:
     "Portfolio cá nhân của Nguyễn Xuân Thành – Frontend Developer sáng tạo với kinh nghiệm xây dựng ứng dụng web hiện đại bằng Next.js, React và TypeScript.",
@@ -13,7 +14,7 @@ export const metadata:Metadata = {
     siteName: "Portfolio | Nguyễn Xuân Thành",
     images: [
       {
-        url: "https://my-protfolio-nine-mu.vercel.app/og-image.jpg",
+        url: "https://my-protfolio-nine-mu.vercel.app/protfolio.png",
         width: 1200,
         height: 630,
         alt: "Nguyễn Xuân Thành - Frontend Developer Portfolio",
@@ -27,21 +28,18 @@ export const metadata:Metadata = {
     title: "Nguyễn Xuân Thành | Frontend Developer",
     description:
       "Xem portfolio của Nguyễn Xuân Thành – Frontend Developer và Creative Coder.",
-  }
+  },
 };
-
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`antialiased`}
-      >
-        {children}
+    <html lang="vi">
+      <body className="antialiased">
+        <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>
   );

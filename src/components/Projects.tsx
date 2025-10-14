@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SectionTitle from "./SectionTitle";
 import Image from "next/image";
+import { Link2 } from "lucide-react";
 
 export default function Projects() {
     const projects = [
@@ -61,22 +62,27 @@ export default function Projects() {
                                     </span>
                                 ))}
                             </div>
-                            <div className="flex-1 flex-col">   
+                            <div className="flex flex-col gap-2"> 
+                                {proj?.linkWebSite &&
+                                    <a
+                                        href={proj?.linkWebSite}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block bg-orange-400 text-white px-3 py-3 rounded-[6px] font-medium hover:bg-orange-600 transition"
+                                    >
+                                        <span className="flex gap-2"><Link2 /> Truy cập website</span>
+                                        
+                                    </a>
+                                }  
                                 <Link
                                     href={`project/${proj.name}`}
-                                    className="text-orange-600 font-semibold text-sm hover:underline"
+                                    className="text-orange-600 font-semibold text-sm hover:underline content-center"
                                 >
                                     View Project →
                                 </Link>
                             </div>
-                            <a
-                                href={proj?.linkWebSite}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-500 hover:underline"
-                            >
-                                {proj?.linkWebSite}
-                            </a>
+                            
+                            
 
                            
                         </div>
