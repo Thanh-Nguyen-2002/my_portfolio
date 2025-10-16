@@ -45,7 +45,8 @@ export default function Skills() {
             gradient: "from-purple-100 via-indigo-50 to-pink-100",
             skills: [
                 { name : "Git", icon : "/icons/git.svg"},
-                { name : "Postman", icon : "/icons/postman.svg"}
+                { name : "Postman", icon : "/icons/postman.svg"},
+                { name : "Figma", icon : "icons/figma.svg"}
             ],
         },
     ];
