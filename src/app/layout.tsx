@@ -3,7 +3,7 @@ import "./globals.css";
 import ClientLayoutWrapper from "@/components/ClientLayoutWrapper";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://my-protfolio-nine-mu.vercel.app"),
+  metadataBase: new URL("https://thanh-nguyen-dev.vercel.app"),
   title: "Nguyễn Xuân Thành | Frontend Developer (ReactJS / TypeScript / Next.js)",
   description:
     "Portfolio cá nhân của Nguyễn Xuân Thành – Frontend Developer với hơn 1 năm kinh nghiệm phát triển dashboard POS, CRM, E-commerce bằng ReactJS, Next.js, TanStack Query, Zustand và TypeScript.",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Nguyễn Xuân Thành | Frontend Developer",
     description:
       "Khám phá portfolio và các dự án thực chiến của Nguyễn Xuân Thành – Frontend Developer chuyên sâu về ReactJS, Next.js và kiến trúc State Management.",
-    url: "https://my-protfolio-nine-mu.vercel.app/",
+    url: "https://thanh-nguyen-dev.vercel.app/",
     siteName: "Nguyễn Xuân Thành Portfolio",
     images: [
       {

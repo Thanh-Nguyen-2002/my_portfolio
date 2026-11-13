@@ -147,8 +147,8 @@ export const data_project_detail = [
         desc: "Website cá nhân và blog kỹ thuật tối ưu hóa hiệu năng, SEO với Next.js 15 App Router và Tailwind CSS.",
         tech: ["Next.js 15", "Tailwind CSS", "TypeScript", "Lucide Icons", "Framer Motion"],
         image: "/images/protfolio.png",
-        linkWebSite: "https://my-protfolio-nine-mu.vercel.app/",
-        github: "https://github.com/Thanh-Nguyen-2002/my_protfolio",
+        linkWebSite: "https://thanh-nguyen-dev.vercel.app/",
+        github: "https://github.com/Thanh-Nguyen-2002/my_portfolio",
         knowledgeHtml: `
         <div class="grid md:grid-cols-2 gap-6">
             <!-- 1. Next.js 15 App Router -->

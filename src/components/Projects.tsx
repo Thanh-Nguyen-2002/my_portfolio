@@ -44,8 +44,8 @@ export default function Projects() {
             ],
             tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
             image: "/images/protfolio.png",
-            linkWebSite: "https://my-protfolio-nine-mu.vercel.app/",
-            github: "https://github.com/Thanh-Nguyen-2002/my_protfolio",
+            linkWebSite: "https://thanh-nguyen-dev.vercel.app/",
+            github: "https://github.com/Thanh-Nguyen-2002/my_portfolio",
             slug: "portfolio",
         },
         {
