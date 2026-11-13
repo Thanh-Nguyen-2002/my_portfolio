@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#451a03" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd5b5" />
+      <stop offset="100%" stop-color="#f5b895" />
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#27272a" />
+    </linearGradient>
+    <linearGradient id="hoodieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#09090b" />
+      <stop offset="100%" stop-color="#18181b" />
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="120" cy="120" r="118" fill="url(#bgGrad)" />
+  <circle cx="120" cy="80" r="90" fill="url(#glowGrad)" />
+
+  <!-- Code elements in background -->
+  <g opacity="0.18" fill="#fdba74" font-family="monospace" font-size="12" font-weight="bold">
+    <text x="24" y="60">&lt;dev&gt;</text>
+    <text x="175" y="80">&#123;FE&#125;</text>
+    <text x="30" y="150">TS</text>
+    <text x="180" y="145">&lt;/&gt;</text>
+  </g>
+
+  <!-- Body / Hoodie / Shoulders -->
+  <path d="M 40 240 C 40 185 75 160 120 160 C 165 160 200 185 200 240 Z" fill="url(#hoodieGrad)" />
+  
+  <!-- Inner T-shirt -->
+  <path d="M 98 170 L 120 200 L 142 170 C 135 174 125 176 120 176 C 115 176 105 174 98 170 Z" fill="url(#shirtGrad)" />
+
+  <!-- Neck -->
+  <path d="M 104 135 L 104 165 C 112 172 128 172 136 165 L 136 135 Z" fill="url(#skinGrad)" />
+  <path d="M 104 140 C 114 150 126 150 136 140 L 136 148 C 126 156 114 156 104 148 Z" fill="#e59873" opacity="0.4" />
+
+  <!-- Head / Face -->
+  <ellipse cx="120" cy="108" rx="36" ry="42" fill="url(#skinGrad)" />
+
+  <!-- Ears -->
+  <ellipse cx="84" cy="110" rx="6" ry="10" fill="url(#skinGrad)" />
+  <ellipse cx="156" cy="110" rx="6" ry="10" fill="url(#skinGrad)" />
+
+  <!-- Hair -->
+  <path d="M 82 98 C 82 65 100 52 120 52 C 145 52 158 68 158 98 C 158 102 152 100 148 94 C 142 85 132 82 120 82 C 108 82 98 86 92 94 C 88 100 82 102 82 98 Z" fill="url(#hairGrad)" />
+  <path d="M 83 95 C 88 82 102 75 120 75 C 135 75 148 80 155 90 C 152 75 140 64 120 64 C 100 64 88 76 83 95 Z" fill="#3f3f46" />
+
+  <!-- Eyebrows -->
+  <path d="M 95 96 Q 106 93 113 97" stroke="#27272a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <path d="M 145 96 Q 134 93 127 97" stroke="#27272a" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+  <!-- Modern Glasses -->
+  <rect x="91" y="99" width="24" height="17" rx="4" fill="none" stroke="#18181b" stroke-width="2.5" />
+  <rect x="125" y="99" width="24" height="17" rx="4" fill="none" stroke="#18181b" stroke-width="2.5" />
+  <path d="M 115 106 L 125 106" stroke="#18181b" stroke-width="2.5" />
+  <path d="M 85 104 L 91 106" stroke="#18181b" stroke-width="2" />
+  <path d="M 149 106 L 155 104" stroke="#18181b" stroke-width="2" />
+  <!-- Glass lens reflection -->
+  <path d="M 94 102 L 102 102" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+  <path d="M 128 102 L 136 102" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+
+  <!-- Eyes -->
+  <circle cx="103" cy="107" r="2.5" fill="#18181b" />
+  <circle cx="137" cy="107" r="2.5" fill="#18181b" />
+
+  <!-- Nose -->
+  <path d="M 119 113 Q 120 121 123 121" stroke="#d97706" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7" />
+
+  <!-- Friendly Smile -->
+  <path d="M 112 129 Q 120 135 128 129" stroke="#b45309" stroke-width="2.2" stroke-linecap="round" fill="none" />
+
+  <!-- Tech Badge Icon on Hoodie -->
+  <g transform="translate(108, 192)">
+    <rect x="0" y="0" width="24" height="15" rx="3" fill="#18181b" opacity="0.8" />
+    <text x="12" y="11" fill="#f97316" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle">&lt;/&gt;</text>
+  </g>
+
+  <!-- Outer Border Ring -->
+  <circle cx="120" cy="120" r="117" fill="none" stroke="#ea580c" stroke-width="2.5" stroke-opacity="0.4" />
+</svg>

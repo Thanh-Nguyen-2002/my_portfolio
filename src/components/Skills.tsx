@@ -1,52 +1,104 @@
-import { Code2, Database, Wrench } from "lucide-react";
+import {
+    Code2,
+    Layers,
+    Palette,
+    CheckSquare,
+    Wrench,
+    Server,
+} from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import Image from "next/image";
-import { ReactNode } from "react";
 
-interface SkillProp {
-    name: string,
-    icon: string
+interface SkillItem {
+    name: string;
+    icon?: string;
+    badge?: string;
 }
 
-interface Props {
-    name : string,
-    icon : ReactNode,
-    gradient : string,
-    skills ?: SkillProp[]
+interface SkillGroup {
+    category: string;
+    description: string;
+    icon: React.ReactNode;
+    color: string;
+    skills: SkillItem[];
 }
 
 export default function Skills() {
-    const groups : Props[] = [
+    const skillGroups: SkillGroup[] = [
         {
-            name: "Frontend",
-            icon: <Code2 className="text-orange-500" size={22} />,
-            gradient: "from-pink-100 via-orange-50 to-yellow-100",
-            skills : [
-                { name: "Reactjs", icon: "/icons/react.svg" },
-                { name: "Nextjs", icon: "/icons/next.svg" },
-                { name: "HTML", icon: "/icons/html.svg" },
-                { name: "CSS", icon: "/icons/css.svg" },
-                { name: "TypeScript", icon: "/icons/typescript.svg" },
-                { name: "Redux", icon: "/icons/redux.svg" },
-            ]
-        },
-        {
-            name: "Backend",
-            icon: <Database className="text-blue-500" size={22} />,
-            gradient: "from-blue-100 via-cyan-50 to-green-100",
+            category: "Core Frontend",
+            description: "Nền tảng giao diện vững chắc và chuẩn ngữ nghĩa",
+            icon: <Code2 className="text-orange-500" size={20} />,
+            color: "border-orange-200 bg-orange-50/40",
             skills: [
-                { name : "", icon : ""},
-                { name : "", icon : ""}
+                { name: "TypeScript", icon: "/icons/typescript.svg" },
+                { name: "JavaScript (ES6+)", icon: "/icons/typescript.svg" },
+                { name: "HTML5", icon: "/icons/html.svg" },
+                { name: "CSS3", icon: "/icons/css.svg" },
+                { name: "Responsive Design" },
             ],
         },
         {
-            name: "Tools",
-            icon: <Wrench className="text-purple-500" size={22} />,
-            gradient: "from-purple-100 via-indigo-50 to-pink-100",
+            category: "Frameworks & State",
+            description: "Xây dựng SPA/SSR hiệu năng cao & đồng bộ trạng thái",
+            icon: <Layers className="text-blue-500" size={20} />,
+            color: "border-blue-200 bg-blue-50/40",
             skills: [
-                { name : "Git", icon : "/icons/git.svg"},
-                { name : "Postman", icon : "/icons/postman.svg"},
-                { name : "Figma", icon : "icons/figma.svg"}
+                { name: "ReactJS", icon: "/icons/react.svg" },
+                { name: "Next.js (App Router)", icon: "/icons/next.svg" },
+                { name: "TanStack Query", badge: "Server State" },
+                { name: "Zustand", badge: "Client State" },
+                { name: "Context API" },
+                { name: "Redux", icon: "/icons/redux.svg" },
+            ],
+        },
+        {
+            category: "UI & Styling",
+            description: "Thiết kế component hiện đại, đồng bộ và chuyển động mượt",
+            icon: <Palette className="text-purple-500" size={20} />,
+            color: "border-purple-200 bg-purple-50/40",
+            skills: [
+                { name: "Tailwind CSS" },
+                { name: "Ant Design" },
+                { name: "Framer Motion" },
+                { name: "Figma", icon: "/icons/figma.svg" },
+            ],
+        },
+        {
+            category: "Forms & Data Validation",
+            description: "Tối ưu render form phức tạp & kiểm soát dữ liệu chặt chẽ",
+            icon: <CheckSquare className="text-emerald-500" size={20} />,
+            color: "border-emerald-200 bg-emerald-50/40",
+            skills: [
+                { name: "React Hook Form" },
+                { name: "Zod Schema" },
+                { name: "RESTful API Integration" },
+            ],
+        },
+        {
+            category: "Build Tools & Quality",
+            description: "Quy trình phát triển chuyên nghiệp, kiểm soát chất lượng code",
+            icon: <Wrench className="text-amber-500" size={20} />,
+            color: "border-amber-200 bg-amber-50/40",
+            skills: [
+                { name: "Vite" },
+                { name: "Webpack" },
+                { name: "Git / GitHub", icon: "/icons/git.svg" },
+                { name: "Postman", icon: "/icons/postman.svg" },
+                { name: "ESLint & Prettier" },
+            ],
+        },
+        {
+            category: "Backend & Database (Secondary)",
+            description: "Hiểu biết backend giúp phối hợp mượt mà với team API",
+            icon: <Server className="text-cyan-500" size={20} />,
+            color: "border-cyan-200 bg-cyan-50/40",
+            skills: [
+                { name: "Java Spring Boot" },
+                { name: "Spring Data JPA" },
+                { name: "PostgreSQL" },
+                { name: "MySQL" },
+                { name: "JWT Authentication" },
             ],
         },
     ];
@@ -54,43 +106,51 @@ export default function Skills() {
     return (
         <section
             id="skills"
-            className="bg-white shadow-md rounded-2xl p-6 md:p-10 border border-gray-100 overflow-hidden relative"
+            className="bg-white shadow-sm rounded-sm p-6 md:p-10 border border-gray-100 overflow-hidden"
         >
-            <SectionTitle title="My Skills" />
+            <SectionTitle title="Kỹ năng chuyên môn" />
+            <p className="text-gray-500 text-xs sm:text-sm mt-1 mb-6">
+                Tập trung vào hệ sinh thái Frontend hiện đại với React, Next.js và kiến trúc State Management
+            </p>
 
-            <div className="grid gap-6 mt-6">
-                {groups.map((group, i) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {skillGroups.map((group, index) => (
                     <div
-                        key={i}
-                        className={`bg-gradient-to-br ${group.gradient} rounded-2xl p-5 transition-all duration-300`}
+                        key={index}
+                        className={`rounded-sm p-5 border ${group.color} transition-all duration-200 hover:shadow-xs`}
                     >
-                        <div className="flex items-center gap-2 mb-3">
+                        <div className="flex items-center gap-2.5 mb-1.5">
                             {group.icon}
-                            <h3 className="font-semibold text-gray-800 text-lg">{group.name}</h3>
+                            <h3 className="font-bold text-gray-800 text-base">
+                                {group.category}
+                            </h3>
                         </div>
+                        <p className="text-xs text-gray-500 mb-3.5">
+                            {group.description}
+                        </p>
 
-                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
-                            {group?.skills?.map((skill, index) => (
+                        <div className="flex flex-wrap gap-2">
+                            {group.skills.map((skill, sIdx) => (
                                 <div
-                                    key={index}
-                                    className="flex flex-col items-center justify-center p-6 rounded-xl 
-                                            bg-white shadow-sm hover:shadow-lg hover:-translate-y-1
-                                            transition-all duration-300 border border-gray-100"
+                                    key={sIdx}
+                                    className="flex items-center gap-2 px-3 py-1.5 rounded-sm bg-white border border-gray-200/80 shadow-2xs hover:border-orange-300 transition-all text-xs font-semibold text-gray-800"
                                 >
-                                    <div className="relative w-12 h-15 mb-3">
-                                        {skill.icon &&
+                                    {skill.icon && (
+                                        <div className="relative w-4 h-4 shrink-0">
                                             <Image
                                                 src={skill.icon}
                                                 alt={skill.name}
                                                 fill
                                                 className="object-contain"
                                             />
-                                        }
-
-                                    </div>
-                                    <h3 className="text-sm font-semibold text-gray-800 tracking-wide">
-                                        {skill.name.toUpperCase()}
-                                    </h3>
+                                        </div>
+                                    )}
+                                    <span>{skill.name}</span>
+                                    {skill.badge && (
+                                        <span className="text-[10px] font-normal px-1.5 py-0.5 rounded-sm bg-gray-100 text-gray-500">
+                                            {skill.badge}
+                                        </span>
+                                    )}
                                 </div>
                             ))}
                         </div>

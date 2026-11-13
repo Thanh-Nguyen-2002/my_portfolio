@@ -3,18 +3,19 @@ import "./globals.css";
 import ClientLayoutWrapper from "@/components/ClientLayoutWrapper";
 
 export const metadata: Metadata = {
-  title: "Nguyễn Xuân Thành | Frontend Developer & Creative Coder",
+  metadataBase: new URL("https://my-protfolio-nine-mu.vercel.app"),
+  title: "Nguyễn Xuân Thành | Frontend Developer (ReactJS / TypeScript / Next.js)",
   description:
-    "Portfolio cá nhân của Nguyễn Xuân Thành – Frontend Developer sáng tạo với kinh nghiệm xây dựng ứng dụng web hiện đại bằng Next.js, React và TypeScript.",
+    "Portfolio cá nhân của Nguyễn Xuân Thành – Frontend Developer với hơn 1 năm kinh nghiệm phát triển dashboard POS, CRM, E-commerce bằng ReactJS, Next.js, TanStack Query, Zustand và TypeScript.",
   openGraph: {
-    title: "Nguyễn Xuân Thành | Frontend Developer & Creative Coder",
+    title: "Nguyễn Xuân Thành | Frontend Developer",
     description:
-      "Khám phá portfolio của Nguyễn Xuân Thành – lập trình viên giao diện sáng tạo, đam mê trải nghiệm người dùng và công nghệ web hiện đại.",
+      "Khám phá portfolio và các dự án thực chiến của Nguyễn Xuân Thành – Frontend Developer chuyên sâu về ReactJS, Next.js và kiến trúc State Management.",
     url: "https://my-protfolio-nine-mu.vercel.app/",
-    siteName: "Portfolio | Nguyễn Xuân Thành",
+    siteName: "Nguyễn Xuân Thành Portfolio",
     images: [
       {
-        url: "https://my-protfolio-nine-mu.vercel.app/protfolio.png",
+        url: "/images/protfolio.png",
         width: 1200,
         height: 630,
         alt: "Nguyễn Xuân Thành - Frontend Developer Portfolio",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nguyễn Xuân Thành | Frontend Developer",
     description:
-      "Xem portfolio của Nguyễn Xuân Thành – Frontend Developer và Creative Coder.",
+      "Portfolio và các dự án Web Frontend của Nguyễn Xuân Thành (ReactJS / TypeScript / Next.js).",
   },
 };
 
@@ -37,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="vi">
-      <body className="antialiased">
+    <html lang="vi" className="scroll-smooth">
+      <body className="antialiased bg-gray-50 text-gray-800">
         <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>
